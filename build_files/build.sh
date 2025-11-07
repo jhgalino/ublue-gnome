@@ -11,8 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # dnf5 install -y tmux 
-dnf5 group install -y gnome-desktop
-dnf5 install -y podman distrobox
+dnf5 group install -y gnome-tweaks
 
 # Use a COPR Example:
 #
@@ -20,6 +19,8 @@ dnf5 install -y podman distrobox
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
+dnf5 -y copr enable blakegardner/xremap
+dnf5 install -y xremap-gnome
 
 #### Example for enabling a System Unit File
 
