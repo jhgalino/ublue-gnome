@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 # dnf5 install -y tmux 
-dnf5 groupinstall -y "GNOME Desktop Environment"
+dnf5 group install -y gnome-desktop
 dnf5 install -y podman distrobox
 
 # Use a COPR Example:
